@@ -96,9 +96,28 @@
       font-weight: bold;
     }
     .home2 .content p span {
-      color: #ffffff;
+      color: #1ff40b;
       font-weight: bold;
       font-size: 2rem;
+    }
+
+    .typing-text {
+      width: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid #000;
+      animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
+      font-size: 1.3rem;
+      color: #05f515;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 80% }
+    }
+
+    @keyframes blink {
+      40% { border-color: transparent }
     }
 
     .home2 .content p {
@@ -632,7 +651,7 @@
     
     .contact-section {
       display: inline-flex;
-      gap: 80px;
+      gap: 60px;
     }
 
     .image-box {
@@ -765,7 +784,7 @@
       text-align: center;
     }
 
-    /* Medium Devices (Tablets, 768px and up) */
+/* Medium Devices (Tablets, 768px and up) */
 /* Medium Devices (Tablets, 992px and below) */
 @media (max-width: 992px) { 
   header {
@@ -869,22 +888,22 @@
   }
 
   nav a {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: 0.5rem 0;
   }
 
   .menu-toggle {
     display: block;
-    font-size: 1.5rem;
+    font-size: 3.5rem;
     cursor: pointer;
   }
 
   .home2 .content h2 {
-    font-size: 1.7rem;
+    font-size: 2rem;
   }
 
   .home2 .content p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   .home2 .image img {
@@ -900,7 +919,7 @@
   }
 
   .skills2 .heading {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .progress-bar {
@@ -922,9 +941,50 @@
   .about2 {
     padding: 40px 20px;
   }
-}
+  /* Skills Section */
+  .skills2 .heading {
+    font-size: 2rem;
+  }
 
- 
+  .progress-bar {
+    font-size: 13px;
+    padding-right: 8px;
+  }
+
+  /* Qualification Section */
+  .qualification2 .heading {
+    font-size: 2rem;
+  }
+
+  .qualification2 .timeline-item h4,
+  .qualification2 .timeline-item p {
+    font-size: 1.4rem;
+  }
+
+  /* Projects Section */
+  .projects2 .heading {
+    font-size: 2rem;
+  }
+
+  .projects2 .project-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .projects2 .project-card p {
+    font-size: 1.3rem;
+  }
+
+  /* Contact Section */
+  .contact2 .heading {
+    font-size: 2rem;
+  }
+
+  .contact2 form input,
+  .contact2 form textarea {
+    font-size: 1.3rem;
+  }
+
+}
   </style>
 </head>
 <body>
@@ -946,7 +1006,7 @@
     <div class="content">
       <br>
       <h2>Hi,There<br/> I'm SANJEEVU.<span>SAI KUMAR</span></h2>
-      <p>I am into <span class="typing-text"></span></p><br>
+      <p>I am  &nbsp; <span class="typing-text"></span></p><br>
       <p style="font-size: 18px;">MY Main Goal to help & Satisficed the Local & Global Clients by web development solutions,Motivated data scientist experienced in data analysis and data visualization using Python . Proven record of delivering accurate models and committed to continuous learning and growth.</p>
       <a href="#about" class="btn"><span>About Me</span><i class="fas fa-arrow-circle-down"></i></a>
       <div class="socials">
@@ -973,10 +1033,9 @@
         </div>
         <div class="content">
             <h3 id="user-detail-name">I'm SANJEEVU SAI KUMAR <i class="fab fa-black-tie"></i></h3>
-            <br><span class="tag">Web Developer<i class="fas fa-mobile-altJava Web Developer "></i></span>
             <p id="user-detail-intro">Hi, I'm sai kumar a junior data scientist with a strong passion for technology and innovation. My skills and expertise span across various areas such as software development, web development, data analysis, UX/UI design and businesses analysis. I am currently working as a software engineer student at Aitam college, where I am constantly developing and implementing new software applications to meet the needs of our faculty. My experience in data analysis and machine learning has also enabled me to design and develop predictive models to help businesses make informed decisions. </p>
         </div>
-        <a href="Saikumar_Resume.pdf" download class="btn">Resume</a>
+        <a href="Saikumar_Resume" download class="btn">Resume</a>
     </div>
   </section>
   <!-- skills section starts -->
@@ -1176,6 +1235,37 @@ form.addEventListener('submit', e => {
     navbar.classList.toggle('show');
   }
 </script>
+
+<script>
+  const words = ["Web Developer", "Data Analyst"];
+  let wordIndex = 0;
+  let charIndex = 0;
+  const typingElement = document.querySelector(".typing-text");
+  let isDeleting = false;
+
+  function type() {
+    const currentWord = words[wordIndex];
+    const currentText = currentWord.substring(0, charIndex);
+    typingElement.textContent = currentText;
+
+    if (!isDeleting && charIndex < currentWord.length) {
+      charIndex++;
+      setTimeout(type, 100);
+    } else if (isDeleting && charIndex > 0) {
+      charIndex--;
+      setTimeout(type, 50);
+    } else {
+      isDeleting = !isDeleting;
+      if (!isDeleting) {
+        wordIndex = (wordIndex + 1) % words.length;
+      }
+      setTimeout(type, 1000);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", type);
+</script>
+
 
 </body>
 </html>
