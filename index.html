@@ -877,25 +877,40 @@
   }
 
   nav {
+    display: none; /* hidden by default */
     flex-direction: column;
     position: absolute;
     top: 60px;
-    width:100px;
-    background: #000000;
-    border: 1px solid #000000;
-    padding: 10px;
-    display: none;
-  }
-
-  nav.show {
-    display: flex;
+    right: 0;
+    width: 200px; /* increased width for better usability */
+    background-color: #000000;
+    border: 1px solid #222;
+    padding: 10px 0;
+    z-index: 999;
+    border-radius: 5px;
   }
 
   nav a {
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s;
     font-size: 1.2rem;
     margin: 0.5rem 0;
+  }  
+
+  nav a:hover {
+    background-color: #333333;
   }
 
+  /* Example toggle class */
+  nav.active {
+    display: flex;
+  }
+  nav.show {
+    display: flex;
+  }
   .menu-toggle {
     display: block;
     font-size: 2rem;
