@@ -7,10 +7,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root {
-      --primary: #ff3c3c;
-      --bg: #0f0f0f;
-      --text: #fff;
-      --accent: #3cf8ff;
+      --primary: #7f5af0;     /* modern violet */
+      --bg: #0d0d0d;          /* near-black for deep contrast */
+      --text: #f1f1f1;        /* soft white */
+      --accent: #10e829;      /* teal green for highlights */
+      --highlight: #ff7f50;   /* coral for attention */
     }
 
     * {
@@ -25,9 +26,9 @@
 
    
     body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      background: linear-gradient(-45deg, #0d0d0d, #1a1a1a, #121212, #0d0d0d);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
     }
 
     header {
@@ -46,7 +47,8 @@
     header .logo {
       font-size: 2rem;
       font-weight: bold;
-      color: var(--primary);
+      font-family: Algerian ;
+      color:#3ce739;
     }
 
     /* Navbar Styling */
@@ -56,15 +58,15 @@
     }
 
     nav a {
-      color: var(--text);
+      color:#3ce739;
       margin: 0 0rem;
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       transition: color 0.3s ease;
       text-decoration: none;
     }
 
-    nav a:hover,
     nav a.active {
+      font-size: 20px;
       color: var(--accent);
       border-bottom: 2px solid var(--accent);
     }
@@ -96,7 +98,7 @@
     }
 
     .home2 .content h2 span {
-      color: #ff6f61;
+      color: #e809d9;
       font-weight: bold;
     }
     .home2 .content p span {
@@ -136,18 +138,14 @@
 
     .home2 .btn {
       display: inline-block;
-      background-color: #ff6f61;
-      color: white;
+      background-color: #8e06c4;
+      color: rgb(255, 255, 255);
       padding: 0.7rem 1.5rem;
       text-decoration: none;
       font-weight: bold;
       border-radius: 5px;
       margin-top: 15px;
       transition: background-color 0.3s ease;
-    }
-
-    .home2 .btn:hover {
-      background-color: #e4574e;
     }
 
     .home2 .btn i {
@@ -167,7 +165,7 @@
 
     .home2 .social-icons a {
       font-size: 40px;
-      color: #fb0606;
+      color: #05f515;
       transition: color 0.3s ease;
       padding: 20px 10px;
       text-decoration: none;
@@ -282,7 +280,7 @@
 
     .btn {
       display: inline-block;
-      background-color: #ff6f61;
+      background-color: #aa40ec;
       color: white;
       padding: 10px 20px;
       text-decoration: none;
@@ -1090,7 +1088,7 @@
 </head>
 <body>
   <header>
-    <div class="logo">My Portfolio</div>
+    <div class="logo">SAI</div>
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <nav id="navbar">
       <a href="#home">Home</a>
@@ -1106,8 +1104,8 @@
   <section class="home2" id="home" >
     <div class="content">
       <br>
-      <h2>Hi,There<br/> I'm SANJEEVU.<span>SAI KUMAR</span></h2>
-      <p>I am  &nbsp; <span class="typing-text"></span></p><br>
+      <h2>Hi,There<br/> I'm <span>SANJEEVU SAI KUMAR</span></h2>
+      <p>I am in  &nbsp; <span class="typing-text"></span></p><br>
       <p style="font-size: 18px;">MY Main Goal to help & Satisficed the Local & Global Clients by web development solutions,Motivated data scientist experienced in data analysis and data visualization using Python . Proven record of delivering accurate models and committed to continuous learning and growth.</p>
       <a href="#about" class="btn"><span>About Me</span><i class="fas fa-arrow-circle-down"></i></a>
       <div class="socials">
@@ -1338,7 +1336,7 @@ form.addEventListener('submit', e => {
 </script>
 
 <script>
-  const words = ["Web Developer", "Data Analyst"];
+  const words = ["Web Development", "Data Analyst", "AI & ML"];
   let wordIndex = 0;
   let charIndex = 0;
   const typingElement = document.querySelector(".typing-text");
