@@ -895,20 +895,20 @@
 /* Small Devices (Mobiles, 576px and below) */
 @media (max-width: 576px) {
   body {
-  background-color: #000000; /* light gray background */
+    background-color: #000000;
   }
-  
+
   header .logo {
     font-size: 1.5rem;
   }
 
   nav {
-    display: none; /* hidden by default */
+    display: none;
     flex-direction: column;
     position: absolute;
     top: 60px;
     right: 0;
-    width: 200px; /* increased width for better usability */
+    width: 200px;
     background-color: #000000;
     border: 1px solid #222;
     padding: 10px 0;
@@ -924,24 +924,22 @@
     transition: background 0.3s;
     font-size: 1.2rem;
     margin: 0.5rem 0;
-  }  
+  }
 
   nav a:hover {
     background-color: #333333;
   }
 
-  /* Example toggle class */
-  nav.active {
-    display: flex;
-  }
+  nav.active,
   nav.show {
-    display: flex; /* Show when menu toggle is clicked */
+    display: flex;
     flex-direction: column;
     position: absolute;
     top: 60px;
     right: 30px;
     z-index: 999;
   }
+
   .menu-toggle {
     display: block;
     font-size: 2rem;
@@ -952,10 +950,7 @@
     font-size: 1.2rem;
   }
 
-  .home2 .content p {
-    font-size: 1rem;
-  }
-
+  .home2 .content p,
   .home2 .content p span {
     font-size: 1rem;
   }
@@ -995,28 +990,34 @@
   .about2 {
     padding: 40px 20px;
   }
+
   .image-box img {
     display: block;
     margin: 10px auto;
     width: 200px;
   }
 
+  /* ✅ FIXED CONTACT SECTION */
   .contact-section {
-    display: contents;
-    padding: 10px;
-  }
-  .form {
     display: block;
-    width: 90%;
-    max-width: 400px; /* limits how wide it can grow */
-    margin: 20px auto; /* centers the form */
+    width: 100%;
     padding: 20px;
-    background-color: #ffffff; /* optional: for contrast on dark background */
+    box-sizing: border-box;
+  }
+
+  .form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* optional: subtle shadow */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
     box-sizing: border-box;
   }
 }
+
+
 
 
   </style>
