@@ -6,14 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    :root {
-      --primary: #7f5af0;     /* modern violet */
-      --bg:rgb(255, 255, 255);          /* near-black for deep contrast */
-      --text: #f1f1f1;        /* soft white */
-      --accent: #10e829;      /* teal green for highlights */
-      --highlight: #ff7f50;   /* coral for attention */
-    }
-
+    
     * {
       margin: 0;
       padding: 0;
@@ -65,7 +58,7 @@
 
     nav a.active {
       font-size: 20px;
-      color: var(--accent);
+      color:#10e829;
       border-bottom: 2px solid var(--accent);
     }
 
@@ -123,7 +116,7 @@
 
     .home2 .content p {
       display:flex;
-      font-size: 2rem;
+      font-size: 1.2rem;
       margin-bottom: 5px;
       color: #000000;
       width:750px;
@@ -329,7 +322,7 @@
     .skills2 {
       padding: 30px 20px;
       background: linear-gradient(to right, #ffffff, #ffffff);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI';
     }
 
     .skills2 .heading {
@@ -422,7 +415,7 @@
     .qualification2 {
       background: linear-gradient(to right, #ffffff, #ffffff);
       padding: 40px 20px;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI';
     }
     .qualification2 .heading {
       text-align: center;
@@ -464,16 +457,6 @@
       border-radius: 10px;
     }
 
-    /* Anchor Overlay */
-    .box .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-    }
-
     /* Content */
     .box h4 {
       color: #3498db;
@@ -493,9 +476,9 @@
     }
 
     .box p {
-      font-size: 16px;
+      font-size: 17px;
       color: #555;
-      line-height: 1.6;
+      line-height: 1.3;
       z-index: 2;
       text-align:justify;
       position: relative;
@@ -524,7 +507,7 @@
     .projects {
       background: linear-gradient(to right, #ffffff, #ffffff);
       padding: 30px 20px;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI';
     }
     .project-section-title {
       text-align: center;
@@ -560,8 +543,7 @@
       font-weight: 600;
       text-align: center;
       background-color: #a8bca8;
-      color: #000000;
-      
+      color: #000000;  
     }
 
     .project-description {
@@ -581,7 +563,6 @@
       justify-content: center;
       text-align: justify;
     }
-
     .project-box:hover .project-description {
       bottom: 0;
     }
@@ -643,7 +624,6 @@
       width: 100%;
       height: auto;
       display: inline-flex;
-
     }
 
     /* Animations */
@@ -681,10 +661,10 @@
       width: 90%;
     }
   }
-  .contact-section {
-    gap:200px;
-  }
-  form[name="submit-to-google-sheet"] {
+    .contact-section {
+      gap:200px;
+    }
+    form[name="submit-to-google-sheet"] {
       background: #fff;
       padding: 30px 20px;
       border-radius: 15px;
@@ -697,14 +677,13 @@
       from { opacity: 0; transform: translateY(-20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
     label {
       display: block;
       margin-bottom: 5px;
       font-weight: 600;
       color: #333;
-    }
-
+    }  
+    
     input[type="text"],
     input[type="email"],
     input[type="phone"],
@@ -922,7 +901,7 @@
     cursor: pointer;
   }
   .home2 {
-    padding:20px 20px;
+    padding:10px 20px;
   }
   .home2 .content h2 {
     font-size: 1.2rem;
@@ -959,7 +938,6 @@
     padding: 8px 16px;
     font-size: 14px;
   }
-
   .social-icons a {
     font-size: 30px;
     padding: 15px 8px;
@@ -1073,9 +1051,6 @@
     }
 }
 
-
-
-
   </style>
 </head>
 <body>
@@ -1091,8 +1066,6 @@
       <a href="#contact">Contact</a>
     </nav>
   </header>
-
-
   <section class="home2" id="home" >
     <div class="content">
       <br>
@@ -1109,10 +1082,8 @@
             </center>
           </ul>
       </div>
-    </div>
-    
+    </div> 
   </section>
-
   <section class="about2" id="about">
     <h2 class="heading"><i class="fa-solid fa-address-card"></i> &nbsp; About Me</h2>
     <span>My Introduction</span>
@@ -1189,7 +1160,6 @@
     </div>
   </div>
   </section>
-
   <section class="qualification2" id="qualification">
     <h2 class="heading">Education Details</h2>
     <div class="contents2" id="contents_1">
@@ -1211,7 +1181,6 @@
         <p>I  have done my Secondary level at Board of Secondary Education, Andhra pradesh.</p>
       </div>
   </section>
-
   <section class="projects" id="projects">
     <h2 class="project-section-title">My Projects</h2>
     <div class="project-grid">
@@ -1252,20 +1221,15 @@
       <form method="post" name="submit-to-google-sheet">
         <label for="Name">Full Name</label>
         <input type="text" id="Name" name="Name" required placeholder="Enter your full name">
-
         <label for="Email">Email</label>
         <input type="email" id="Email" name="Email" required placeholder="Enter your email">
-
         <label for="Mobile">Mobile No</label>
         <input type="phone" id="Mobile" name="Mobile" required placeholder="Enter your Mobile">
-
         <label for="Message">Message</label>
         <textarea id="Message" name="Message" rows="6" required placeholder="Write your text here"></textarea>
-
         <input type="submit" value="Submit">
         <span id="msg"></span>
-    </form>
-    
+    </form>    
 </div>
 </div>
 <script>
@@ -1287,14 +1251,11 @@ form.addEventListener('submit', e => {
 </script>
     </div>
   </section>
-
   <footer>
     &copy; 2025 Sanjeevu Sai Kumar. All Rights Reserved.
   </footer>
-
   <script>
     const navLinks = document.querySelectorAll('nav a');
-
     window.addEventListener('scroll', () => {
       let current = '';
       document.querySelectorAll('section').forEach((section) => {
@@ -1304,7 +1265,6 @@ form.addEventListener('submit', e => {
           current = section.getAttribute('id');
         }
       });
-
       navLinks.forEach((a) => {
         a.classList.remove('active');
         if (a.getAttribute('href') === #${current}) {
@@ -1313,21 +1273,18 @@ form.addEventListener('submit', e => {
       });
     });
   </script>
-
   <script>
   function toggleMenu() {
     const navbar = document.getElementById('navbar');
     navbar.classList.toggle('show');
   }
 </script>
-
 <script>
   const words = ["Web Developer", "Data Analyst", "AIML Engineer"];
   let wordIndex = 0;
   let charIndex = 0;
   const typingElement = document.querySelector(".typing-text");
   let isDeleting = false;
-
   function type() {
     const currentWord = words[wordIndex];
     const currentText = currentWord.substring(0, charIndex);
@@ -1347,10 +1304,7 @@ form.addEventListener('submit', e => {
       setTimeout(type, 1000);
     }
   }
-
   document.addEventListener("DOMContentLoaded", type);
 </script>
-
-
 </body>
 </html>
